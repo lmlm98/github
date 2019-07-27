@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox">
+</body>
+<script>
+    var domList = document.getElementsByTagName('input')
+    var checkBoxList = []; //返回的所有的checkbox
+    var len = domList.length; //缓存到局部变量
+    while (len--) { //使用while的效率会比for循环更高
+        if (domList[len].type == 'checkbox') {
+            checkBoxList.push(domList[len]);
+        }
+    }
+    console.log(checkBoxList);
+</script>
+
+</html>
